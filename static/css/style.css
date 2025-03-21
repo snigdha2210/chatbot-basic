@@ -21,7 +21,7 @@ body {
 }
 
 header {
-  margin-top: 30px;
+  margin-top: 10px;
   height: 5px;
   background-color: #ccc;
   position: relative;
@@ -33,18 +33,14 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #7B58E5;
+  background-color: #7b58e5;
   animation: move-color 3s ease-in-out infinite;
-}
-
-main {
-  padding: 20px;
 }
 
 footer {
   padding-top: 30px;
   padding-bottom: 20px;
-  color:  #333;
+  color: #333;
   background-color: #ffffff;
   border-top: 2px solid #ccc;
   text-align: center;
@@ -54,12 +50,9 @@ footer {
 }
 
 footer a {
-  color: #7B58E5;
+  color: #7b58e5;
 }
 /* ---------------- */
-
-
-
 
 /* ---------------- */
 /* Chatbot box head*/
@@ -78,9 +71,9 @@ footer a {
   margin-bottom: 10px;
   /* text-align: center; */
   color: #000000;
-  
+
   /* Use a modern looking font */
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 3em;
 }
 
@@ -121,13 +114,12 @@ option:hover {
   color: #fff;
 }
 
-
 .chat-form {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  }
+}
 
 .chat-form textarea[type="text"] {
   flex-grow: 1;
@@ -137,7 +129,7 @@ option:hover {
   border-radius: 7px;
   border: 1px solid darkgray;
   font-size: 15px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   resize: both;
   overflow: auto;
@@ -152,7 +144,7 @@ option:hover {
   outline: 0;
 }
 
-#recordButton{
+#recordButton {
   background-color: blue;
   color: white;
   border: none;
@@ -165,7 +157,7 @@ option:hover {
 }
 
 .chat-form button[type="submit"] {
-  background-color: #0891B2;
+  background-color: #0891b2;
   color: white;
   font-size: 1em;
   border: none;
@@ -178,21 +170,15 @@ option:hover {
 }
 /* ---------------- */
 
-
-
-
 /* ---------------- */
 /* Modification if the screen size is small */
-@media only screen and (max-width:1200px){
+@media only screen and (max-width: 1200px) {
   .chat-form button[type="submit"] {
-  min-width: 50px;
-  max-width: 100px;
-}
+    min-width: 50px;
+    max-width: 100px;
+  }
 }
 /* ---------------- */
-
-
-
 
 /* ---------------- */
 /* Chatbot box message format*/
@@ -276,7 +262,6 @@ option:hover {
   animation: fade-in-bottom 0.5s forwards;
 }
 
-
 .error p {
   max-width: 70%;
   background-color: #ff9393;
@@ -322,12 +307,9 @@ option:hover {
 }
 
 .purple {
-  color: #7B58E5;
+  color: #7b58e5;
 }
 /* ---------------- */
-
-
-
 
 /* ---------------- */
 /* Animation */
@@ -336,10 +318,10 @@ option:hover {
     left: 0%;
   }
   50% {
-    left: 50%
+    left: 50%;
   }
   100% {
-    left: calc(100% - 100px)
+    left: calc(100% - 100px);
   }
 }
 
@@ -359,3 +341,302 @@ option:hover {
   }
 }
 
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables for light theme */
+:root {
+  --background-color: #f0f0f0;
+  --text-color: #333;
+  --primary-color: #0891b2;
+  --accent-color: #7b58e5;
+  --header-bg: #ffffff;
+  --chat-bg: #ffffff;
+  --border-color: #ccc;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --background-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --primary-color: #0d6efd;
+  --accent-color: #bb86fc;
+  --header-bg: #2c2c2c;
+  --chat-bg: #2c2c2c;
+  --border-color: #444;
+}
+
+/* Body styling */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Toggle button container */
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Toggle button style */
+#toggle-mode {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#toggle-mode:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Chatbot container */
+.chatbot {
+  /* max-width: 600px; */
+  margin: 0.5rem auto;
+  background-color: var(--chat-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Chat header */
+.chat-header {
+  background-color: var(--header-bg);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+.chat-header h1 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+/* Subtext below header */
+.header-sub-text {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Chat messages container */
+.spacer {
+  min-height: 300px;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* Chat form styling */
+.chat-form {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--header-bg);
+}
+.chat-form textarea {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+  margin-right: 0.5rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.chat-form button[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.chat-form button[type="submit"]:hover {
+  background-color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+  .chatbot {
+    margin: 1rem;
+  }
+  .chat-header h1 {
+    font-size: 1.5rem;
+  }
+  .chat-form textarea {
+    font-size: 0.9rem;
+  }
+  .chat-form button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Make the chatbot container fill a large portion of the viewport */
+.chatbot {
+  display: flex;
+  flex-direction: column;
+  height: calc(
+    100vh - 4rem
+  ); /* Adjust 4rem to account for any header/padding */
+  margin: 2rem auto;
+  max-width: 600px;
+  background-color: var(--chat-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Allow the chat messages area to take up remaining space */
+.spacer {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* Container for the toggle switch */
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Toggle switch styles */
+.toggle-switch {
+  position: relative;
+  width: 100px;
+  height: 36px;
+  margin-top: -30px;
+}
+
+/* Hide the default checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Label styles that make up the switch */
+.toggle-switch label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 30px;
+  padding: 0 5px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s;
+}
+
+/* Icon styles */
+.toggle-switch .icon {
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+/* The slider that flips */
+.toggle-switch .slider {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+/* When checked, move the slider to the right */
+.toggle-switch input:checked + label .slider {
+  transform: translateX(65px);
+}
+
+/* Optional: change label background when checked */
+.toggle-switch input:checked + label {
+  background-color: #0891b2; /* or your chosen primary color */
+}
+/* Header container */
+.chat-header {
+  display: flex; /* Lay out items horizontally */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space items apart: h1 on the left, toggle on the right */
+  padding: 1rem;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Remove default margin from the h1 */
+.chat-header h1 {
+  margin: 0;
+}
+
+/* Hide the default checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Label styles for the toggle switch */
+.toggle-switch label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 30px;
+  padding: 0 5px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s;
+}
+
+/* Icons (sun & moon) */
+.toggle-switch .icon {
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+/* The slider that moves on toggle */
+.toggle-switch .slider {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  transition: transform 0.3s;
+  z-index: 1;
+}
